@@ -32,7 +32,10 @@ You need to have [Node.js](https://nodejs.org/) and its package manager, npm, in
 ### Installation
 
 1.  **Clone the repository** (or download the source code) to your local machine.
-
+    ```shell
+    git clone git@github.com:Tejiri-A/profile-card.git
+    ```
+    
 2.  **Navigate to the project directory**:
     ```shell
     cd profile-card
