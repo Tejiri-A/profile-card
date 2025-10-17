@@ -7,7 +7,7 @@
   --clr-card-bg: #ffffff;
   --clr-text-primary: #212121;
   --clr-text-secondary: #757575;
-  --clr-accent: #4285f4; /* A calm blue accent */
+  --clr-accent: #1a73e8; /* A darker, accessible blue */
   --clr-border: #e0e0e0;
 
   /* Typography */
@@ -89,6 +89,19 @@ textarea, select {
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
   scroll-margin-block: 5ex;
+}
+
+/* Visually hide elements while keeping them accessible to screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /*MAIN STYLES*/
@@ -185,7 +198,7 @@ main{
     }
 
     & li{
-        font-size: clamp(0.5rem, 2vw, 0.85rem);
+        font-size: clamp(0.875rem, 2vw, 1rem);
         color: var(--clr-text-secondary);
     }
 }
@@ -200,11 +213,9 @@ main{
         border: 1px solid var(--clr-border);
         padding: 0.5rem 0;
         transition: background-color 0.3s ease;
+        
         &:hover{
             background-color: var(--clr-bg);
-        }
-        & img{
-            transition: transform 0.3s ease;
         }
         &:hover img{
             transform: translateY(-2px);
@@ -216,6 +227,16 @@ main{
             justify-content: center;
             width: 100%;
             cursor: pointer;
+            border-radius: 2px; /* For focus outline */
+        }
+        
+        & a:focus-visible {
+          outline: 2px solid var(--clr-accent);
+          outline-offset: 2px;
+        }
+
+        & img{
+            transition: transform 0.3s ease;
         }
     }
 }
