@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tejiri's Profile Card Component</title>
+    <script defer type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <main>
+      <article data-testid="”test-profile-card”" class="card">
+        <div class="card__avatar-container">
+          <figure class="img-container">
+            <img
+              src="https://res.cloudinary.com/dbdkedssq/image/upload/v1760608570/profile_pic_tv8813.jpg"
+              alt="Profile picture of Oghenetejiri Amrasa"
+              data-testid="”test-user-avatar”"
+            />
+          </figure>
+        </div>
+        <div class="card__info">
+          <div class="card__info-text">
+            <h2 class="card__info-name" data-testid="”text-user-name”">
+              Oghenetejiri Samuel Amrasa
+            </h2>
+            <p
+              class="card__info-time"
+              id="currentTime"
+              data-testid="”test-user-time”"
+            ></p>
+            <p class="card__info-bio" data-testid="”test-user-bio”">
+              Front-End Developer with 2 years of experience specializing in
+              React.js to build dynamic, high-performance, and fully responsive
+              web applications. Proven ability to translate complex UI/UX
+              designs into pixel-perfect, maintainable code, prioritizing
+              exceptional user experience. Proficient in JavaScript/TypeScript,
+              HTML5, and CSS3/Tailwind CSS/SCSS.
+            </p>
+            <div class="card__info-grid">
+              <!--hobbies-->
+              <section>
+                <ul id="myHobbies" data-testid="test-user-hobbies" role="list">
+                  <li>Watching football</li>
+                  <li>Playing video games</li>
+                  <li>taking walks</li>
+                </ul>
+              </section>
+              <!--dislikes-->
+              <section>
+                <ul
+                  id="myDislikes"
+                  data-testid="test-user-dislikes"
+                  role="list"
+                >
+                  <li>Noisy environments</li>
+                  <li>Fake friends</li>
+                  <li>Pounded yam</li>
+                </ul>
+              </section>
+            </div>
+          </div>
+
+          <!--social links-->
+          <ul
+            data-testid="”test-user-social-links”"
+            class="card__info-social-links"
+            role="list"
+          >
+            <li>
+              <a href="" target="_blank" rel="noopener noreferrer"
+                ><img
+                  src="./src/assets/github.svg"
+                  alt="github icon"
+                  data-testid="test-user-social-github"
+              /></a>
+            </li>
+            <li>
+              <a href="" target="_blank" rel="noopener noreferrer"
+                ><img
+                  src="./src/assets/instagram.svg"
+                  alt="instagram icon"
+                  data-testid="test-user-social-instagram"
+              /></a>
+            </li>
+            <li>
+              <a href="" target="_blank" rel="noopener noreferrer"
+                ><img
+                  src="./src/assets/linkedin.svg"
+                  alt="linkedin icon"
+                  data-testid="test-user-social-linkedin"
+              /></a>
+            </li>
+            <li>
+              <a href="" target="_blank" rel="noopener noreferrer"
+                ><img
+                  src="./src/assets/twitter.svg"
+                  alt="twitter icon"
+                  data-testid="test-user-social-twitter"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
